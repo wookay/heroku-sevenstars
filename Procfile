@@ -1,1 +1,1 @@
-web: julia-0.7.0-DEV/bin/julia wasm.jl
+web: julia-0.7.0-DEV/bin/julia --color=yes wasm.jl

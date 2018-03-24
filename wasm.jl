@@ -1,6 +1,5 @@
-using Test
 using Bukdu # ApplicationController Conn Plug Render render get
-import Bukdu: Javascript
+import Bukdu: JavaScript
 
 #=
 using WebAssembly # WebAssembly.Func
@@ -43,7 +42,7 @@ end
 
 # https://gist.github.com/SpaceManiac/daf03e0ac6ed56e7a7723ccdeaf5cfe2
 function hello_js(::WasmController)
-    render(Javascript, """
+    render(JavaScript, """
 var memory = new WebAssembly.Memory({initial:256, maximum:256});
 var imports = { 'env': { 'memory': memory, 'print': print, } };
 
@@ -58,7 +57,7 @@ function print(ptr, len) {
     console_out(text);
 };
 
-async function fetch_wast () {
+async function fetch_wast() {
     console_out("fetch_wast /hello.wast");
     let res = await fetch('/hello.wast');
     return res.arrayBuffer();
