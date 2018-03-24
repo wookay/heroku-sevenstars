@@ -122,6 +122,7 @@ function index(::WasmController)
   <h3>Bukdu sevenstars</h3>
   <ul>
     <li>Full code of this page => <a href="https://github.com/wookay/Bukdu.jl/blob/sevenstars/examples/wasm.jl">https://github.com/wookay/Bukdu.jl/blob/sevenstars/examples/wasm.jl</a></li>
+    <li>Heroku example => <a href="https://github.com/wookay/heroku-sevenstars">https://github.com/wookay/heroku-sevenstars</a></li>
   </ul>
   <pre>$(get_banner_versioninfo())</pre>
   <div id="console" />
