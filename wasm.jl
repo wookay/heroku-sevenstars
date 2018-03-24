@@ -114,7 +114,7 @@ Router() do
     plug(Plug.Static, at="/", from=normpath(@__DIR__, "public"))
 end
 
-Bukdu.start(8080)
+Bukdu.start(parse(Int,ENV["PORT"]); host=ip"0.0.0.0")
 
 Base.JLOptions().isinteractive==0 && wait()
 

@@ -17,15 +17,12 @@ You can run Bukdu on [Heroku](https://www.heroku.com/).
 
  * Heroku: Add two buildpacks on **Settings** -> **Add buildpack**
 
-   - [https://github.com/wookay/heroku-buildpack-cmake](https://github.com/wookay/heroku-buildpack-cmake)
-
    - [https://github.com/wookay/heroku-buildpack-julia-07](https://github.com/wookay/heroku-buildpack-julia-07)
 
   ```sh
 λ ~/work/heroku-sevenstars $ heroku buildpacks
-=== bukdu Buildpack URLs
-1. https://github.com/wookay/heroku-buildpack-cmake
-2. https://github.com/wookay/heroku-buildpack-julia-07
+=== sevenstars Buildpack URL
+https://github.com/wookay/heroku-buildpack-julia-07
 ```
 
  * Get more information: [https://devcenter.heroku.com/categories/deployment](https://devcenter.heroku.com/categories/deployment)
