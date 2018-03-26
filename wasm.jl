@@ -1,4 +1,4 @@
-using Bukdu # ApplicationController Conn JavaScript Plug.Static render routes get plug
+using Bukdu # ApplicationController Conn JavaScript Plug.Static Router render routes get plug
 
 #=
 using Charlotte # @code_wasm
@@ -142,6 +142,8 @@ end
 
 import Sockets: @ip_str
 Bukdu.start(parse(Int,ENV["PORT"]); host=ip"0.0.0.0")
+
+(Router)(get, "/")
 
 Base.JLOptions().isinteractive==0 && wait()
 
