@@ -1,7 +1,6 @@
-using Bukdu # ApplicationController Conn Plug Render render get
+using Bukdu # ApplicationController Conn JavaScript Plug.Static render routes get plug
 
 #=
-using WebAssembly # WebAssembly.Func
 using Charlotte # @code_wasm
 
     relu(x) = ifelse(x < 0, 0, x)
@@ -106,6 +105,7 @@ function index(::WasmController)
     render(HTML, """
 <html>
 <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>Bukdu sevenstars</title>
   <script src="/javascripts/libwabt.js"></script>
   <script src="/hello.js"></script>
@@ -129,7 +129,11 @@ function index(::WasmController)
 """)
 end
 
-Router() do
+
+
+if PROGRAM_FILE == basename(@__FILE__)
+
+routes() do
     get("/", WasmController, index)
     get("/hello.js", WasmController, hello_js)
     get("/hello.wast", WasmController, hello_wast)
@@ -142,3 +146,5 @@ Bukdu.start(parse(Int,ENV["PORT"]); host=ip"0.0.0.0")
 Base.JLOptions().isinteractive==0 && wait()
 
 # Bukdu.stop()
+
+end # if
