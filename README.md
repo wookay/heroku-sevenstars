@@ -15,7 +15,7 @@ You can run Bukdu on [Heroku](https://www.heroku.com/).
 
    - [heroku-sevenstars](https://github.com/wookay/heroku-sevenstars)
 
- * Heroku: Add two buildpacks on **Settings** -> **Add buildpack**
+ * Heroku: Add a buildpack on **Settings** -> **Add buildpack**
 
    - [https://github.com/wookay/heroku-buildpack-julia-07](https://github.com/wookay/heroku-buildpack-julia-07)
 
