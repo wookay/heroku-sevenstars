@@ -1,5 +1,4 @@
 using Pkg
-Pkg.clone("https://github.com/wookay/Bukdu.jl.git")
-Pkg.checkout("HTTP", "master")
-Pkg.checkout("Bukdu", "sevenstars")
+Pkg.REPLMode.pkgstr("add HTTP#master")
+Pkg.REPLMode.pkgstr("add https://github.com/wookay/Bukdu.jl.git#sevenstars")
 using Bukdu
